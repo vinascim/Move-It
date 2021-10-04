@@ -1,0 +1,239 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+#home {
+    background-color: #F2F3F5;
+    height: 100vh;
+}
+
+
+.xp {
+    display: flex;
+    color: #666666;
+    justify-content: center;
+    padding: 48px;
+    align-items: center;
+   
+}
+.xp .line {
+    height: 4px;
+    width: 845px;
+    background-color: #DCDDE0;
+    border-radius: 5px;
+    margin: 0px 24px 0px 24px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 135px;
+
+}
+
+.main {
+    width: 389px;
+
+    margin-right: 103px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile img{
+    height: 88px;
+    width: 88px;
+    margin-right: 24px;
+}
+
+
+.name h1 {
+    color: #2E384D;
+    font-size: 24px;
+    
+}
+.name p {
+    font-size: 16px;
+    align-items: center;
+    display: flex;
+    color: #666666;
+}
+.name img {
+    width: 25px;
+    height: 20px;
+    margin-right: 3px;
+}
+
+
+.chall-finish {
+    display: flex;
+    align-items: center;
+    margin-top: 58px;
+    width: 389px;
+    justify-content: space-between;
+}
+
+.chall-finish p {
+    font-size: 24px;
+    font-weight: 500;
+    color: #666666;
+}
+
+.line2 {
+    background-color: #D7D8DA;
+    height: 2px;
+    width: 389px;
+    border-radius: 1.5px;
+    margin-top: 18px;
+}
+
+.counter {
+    display: flex;
+    justify-content: center;
+    margin-top: 56px;
+}
+
+.counter p {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 120px;
+    background-color: #FFFFFF;
+    height: 176px;
+    width: 89px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    color: #2E384D;
+}
+
+.counter span {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 104px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2E384D;
+    margin: 0px 8px 0px 8px;
+    
+}
+
+.counter .line3 {
+    height: 176px;
+    width: 0px;
+    border: 2px solid #F0F1F3;
+   
+    
+}
+
+.button-start {
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+
+}
+
+.button-start button {
+    padding: 32px;
+    width: 100%;
+    border: none;
+    background-color: #5965E0;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.button-start img {
+    margin-left: 16px;
+}
+
+
+.challenges {
+    background-color: #FFFFFF;
+    width: 500px;
+    text-align: center;
+    box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+}
+
+
+.earnXP h1{
+    color: #5965E0;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 25px;
+}
+.line4-center {
+    display: flex;
+    justify-content: center;
+}
+
+.line4 {
+    width: 340px;
+    height: 0px;
+    border: 1px solid #DCDDE0;
+    margin-top: 25px;
+    margin-bottom: 80px;
+}
+
+.exercise {
+    margin-top: 50px;
+}
+
+.exercise h1 {
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.exercise p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 38px;
+}
+
+.button-start{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.button-failed {
+    height: 50px;
+    width: 174px;
+    background-color: #E83F5B;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.button-successful {
+    height: 50px;
+    width: 174px;
+    background-color: #4CD62B;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
