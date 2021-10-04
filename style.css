@@ -22,12 +22,26 @@ body {
     align-items: center;
    
 }
-.xp .line {
+.xp #line {
     height: 4px;
     width: 845px;
     background-color: #DCDDE0;
     border-radius: 5px;
     margin: 0px 24px 0px 24px;
+}
+
+#line-green {
+    height: 4px;
+    width: 70%;
+    background-color:#4CD62B;
+    border-radius: 5px;
+    animation: progress-animation 5s;
+
+}
+
+@keyframes progress-animation{
+    0% { width: 0%; } 
+    100% { width: 70%}
 }
 
 .container {
@@ -134,20 +148,32 @@ body {
 
 }
 
+.botao {
+    transition: 1s;
+}
+
+.botao:hover {
+    background-color:#4953B8;
+    transition: 1s;
+}
+
 .button-start .botao2 {
     color: #666666; 
     background-color: #FFFFFF;
     transition: 1s;
 
 }
-
 .button-start .botao2:hover {
     color: #FFFFFF; 
     background-color: #E83F5B;
     transition: 1s;
 
 }
+.button-start .botao3 {
+    color: #666666; 
+    background-color: #FFFFFF;
 
+}
 
 .button-start button {
     padding: 32px;
@@ -168,6 +194,56 @@ body {
     margin-left: 16px;
 }
 
+.button-finish {
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+
+}
+.button-finish img {
+    margin-left: 16px;
+}
+
+.button-finish button {
+    padding: 32px;
+    width: 100%;
+    border: none;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #666666;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #4CD62B;
+}
+
+.button-restart {
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+
+}
+
+.button-restart button{
+    padding: 20px;
+    width: 50%;
+    border: none;
+    background-color: #4CD62B;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .challenges {
     background-color: #FFFFFF;
@@ -177,12 +253,15 @@ body {
     border-radius: 5px;
 }
 
+
 .challenges h1 {
     color: #666666;
     font-weight: 500;
     font-size: 24px;
     margin-top: 110px;
 }
+
+
 
 .challenges .uparrow img {
     width: 70px;

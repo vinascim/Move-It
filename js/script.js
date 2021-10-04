@@ -10,8 +10,10 @@ function startTimer(duration, display) {
         display.textContent = minutes + ":" + seconds;
         if (--timer < -1) {
             timer = duration;
-        } else if (timer == -1) {
+        } else if (timer === -1) {
             clearInterval(parar)
+            var removeButton = document.querySelector('.button-start')
+            var tradeButton = document.getElementById('button-trade')
             var tradepage = document.querySelector('.challenges')
             tradepage.innerHTML = ` <div class="earnXP">
                                     <h1>Ganhe 400 xp</h1>
@@ -29,19 +31,39 @@ function startTimer(duration, display) {
                                     <button onclick="buttonSuccessful()" class="button-successful">Completei</button>
                                     </div>
                                     </div>`
+            
+            removeButton.remove()
+            tradeButton.innerHTML = `<div class="button-finish">
+                                        <button id="botao3" type="submit"  > Ciclo encerrado <img src="images/check_circle.png" alt=""></button>
+                                    </div> `                 
         }
     }, 100);
 }
 
-function buttonSuccessful() {
 
+function buttonSuccessful(){
     var challFinish = document.getElementById('chall')
-    
-    console.log('ola')
-    
+    var lineGreen = document.getElementById('line')
+    var challenges2 = document.querySelector('.challenges')
+    lineGreen.innerHTML = ` <div id="line-green"></div> `
+    challFinish.innerHTML = `01`
+    challenges2.innerHTML =`<div class="earnXP">
+    <h1>Parabéns!</h1>
+    </div>
+    <div class="line4-center">
+    <div class="line4"></div></div>
+    <img class="peso" src="images/emojiTongue.png" alt="strong">
+    <div class="exercise">
+    <h1>Você conseguiu!</h1>
+    <p>Agora é só comemorar e <br>recomeçar novamente!<br></p>
+    <div class="button-restart">
+    <button type="submit" onclick="iniciaContagem()" >Começar outro ciclo </button>
+    </div>
+    </div>`
 
-    challFinish.innerHTML= ++chall
 }
+
+
 function iniciaContagem() {
         var duration = 60 * 1 //Conversão para segundos
         var display = document.querySelector('#timer') //Elemento para exibir o timer
@@ -58,13 +80,11 @@ function trocarbotao() {
     var botao = document.querySelector('.button-start')
     botao2.remove()
     botao.innerHTML=`  <button class="botao2" "type="submit" onclick="pararContagem()" id="botao"> Abandonar ciclo <img src="images/X.png" alt=""></button> `
-    
 
     }
 
 function pararContagem() {
     clearInterval(parar)
-
 
     var botao2 = document.getElementById('botao')
     var botao = document.querySelector('.button-start')
