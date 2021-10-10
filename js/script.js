@@ -27,7 +27,7 @@ function startTimer(duration, display) {
                                     Caminhe por 3 minutos e estique suas pernas <br>
                                     pra você ficar saudável.</p>
                                     <div class="buttons">
-                                    <button onclick="" class="button-failed">Falhei</button>
+                                    <button onclick="buttonFailed()" class="button-failed">Falhei</button>
                                     <button onclick="buttonSuccessful()" class="button-successful">Completei</button>
                                     </div>
                                     </div>`
@@ -45,8 +45,13 @@ function buttonSuccessful(){
     var challFinish = document.getElementById('chall')
     var lineGreen = document.getElementById('line')
     var challenges2 = document.querySelector('.challenges')
-    lineGreen.innerHTML = ` <div id="line-green"></div> `
-    challFinish.innerHTML = `01`
+    
+
+    lineGreen.innerHTML = ` <div id="line-green"></div> `  
+    //for(i= 0; i < 2; i++) {
+     //   challFinish.innerHTML = i < 10 ? "0" + i : i;
+   // }
+
     challenges2.innerHTML =`<div class="earnXP">
     <h1>Parabéns!</h1>
     </div>
@@ -55,13 +60,30 @@ function buttonSuccessful(){
     <img class="peso" src="images/emojiTongue.png" alt="strong">
     <div class="exercise">
     <h1>Você conseguiu!</h1>
-    <p>Agora é só comemorar e <br>recomeçar novamente!<br></p>
-    <div class="button-restart">
-    <button type="submit" onclick="iniciaContagem()" >Começar outro ciclo </button>
-    </div>
+    <p>Agora é só comemorar e recomeçar<br>para ganhar mais xp!<br></p> 
+    </div>`
+    
+    var tradeButton = document.querySelector('.button-finish')
+    tradeButton.remove()
+
+    var botaoReset = document.getElementById('button-trade')
+    botaoReset.innerHTML= `<div class="button-start">
+    <button  type="submit" onclick="iniciaContagem(), anotherCicle()" id="botao">Começar outro ciclo<img src="images/arrow.png" alt=""></button>
     </div>`
 
+    challenges2.remove()
+    var challegens2 = document.getElementById('challenges-trade')
+    challegens2.innerHTML = `<div class="challenges">
+    <h1>Inicie um ciclo <br> para receber desafios</h1>
+    <div class="uparrow">
+    <img  src="images/uparrow.png" alt="seta"></div>
+    <h2>Avance de level completando <br> os desafios.</h2>
+    </div>`
+   
 }
+
+
+
 
 
 function iniciaContagem() {
